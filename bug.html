@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden because of the incorrect use of the style attribute.
+  </div>
+
+  <script>
+    document.getElementById("myDiv").style.display = "none;";
+    document.getElementById("myDiv").style.visibility = "hidden"; // Redundant and incorrect
+  </script>
+</body>
+</html>
